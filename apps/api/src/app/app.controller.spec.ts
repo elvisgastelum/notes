@@ -1,5 +1,6 @@
+import { createResponse } from '@api/test-utils';
+import { GetPingData } from '@api/types';
 import { Test, TestingModule } from '@nestjs/testing';
-
 import { AppController } from './app.controller';
 import { AppService } from './app.service';
 
@@ -13,10 +14,15 @@ describe('AppController', () => {
     }).compile();
   });
 
-  describe('getData', () => {
-    it('should return "Hello API"', () => {
+  describe('getPing', () => {
+    it('should return "pong"', () => {
       const appController = app.get<AppController>(AppController);
-      expect(appController.getData()).toEqual({ message: 'Hello API' });
+
+      const response = createResponse<GetPingData>({
+        data: { message: 'pong' },
+      });
+
+      expect(appController.getPing()).toEqual(response);
     });
   });
 });

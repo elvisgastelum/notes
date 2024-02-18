@@ -1,14 +1,14 @@
 /* eslint-disable */
 export default {
   displayName: {
-    color: 'blue',
-    name: 'api',
+    name: 'api-types',
+    color: 'gray',
   },
-  preset: '../../jest.preset.js',
+  preset: '../../../jest.preset.js',
   testEnvironment: 'node',
   transform: {
     '^.+\\.[tj]s$': ['ts-jest', { tsconfig: '<rootDir>/tsconfig.spec.json' }],
   },
   moduleFileExtensions: ['ts', 'js', 'html'],
-  coverageDirectory: '../../coverage/apps/api',
+  coverageDirectory: '../../../coverage/libs/api/types',
 };
