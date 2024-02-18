@@ -8,7 +8,11 @@
     "@nestjs/schematics": "^10.0.1",
     "@nx/js": "18.0.4",
     "@nx/nest": "18.0.4",
+    "@nx/react": "18.0.4",
     "nx": "18.0.4"
   },
-  "dependencies": {}
+  "dependencies": {
+    "react": "18.2.0",
+    "react-dom": "18.2.0"
+  }
 }
